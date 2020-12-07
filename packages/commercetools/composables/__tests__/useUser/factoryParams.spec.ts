@@ -45,21 +45,21 @@ const context = {
 };
 
 describe('[commercetools-composables] factoryParams', () => {
-  it('loadUser return customer data', async () => {
+  it('load return customer data', async () => {
 
     (context.$ct.api.getMe as jest.Mock).mockReturnValueOnce({ data: { me: { customer } }});
-    expect(await params.loadUser(context)).toEqual(customer);
+    expect(await params.load(context)).toEqual(customer);
 
     (context.$ct.api.getMe as jest.Mock).mockRejectedValueOnce(new GraphQLMockError('Resource Owner Password Credentials Grant'));
-    expect(await params.loadUser(context)).toEqual(null);
+    expect(await params.load(context)).toEqual(null);
 
     (context.$ct.api.getMe as jest.Mock).mockRejectedValueOnce(new Error('some error'));
-    await expect(params.loadUser(context)).rejects.toThrowError('some error');
+    await expect(params.load(context)).rejects.toThrowError('some error');
   });
 
   it('does not loading the user without user session', async () => {
     (context.$ct.api.isGuest as any).mockReturnValue(true);
-    expect(await params.loadUser(context)).toEqual(null);
+    expect(await params.load(context)).toEqual(null);
   });
 
   it('logOut method calls API log out method', async () => {
