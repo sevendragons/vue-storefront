@@ -7,6 +7,7 @@
 - enabled "modern mode" in `yarn build` command ([#5203](https://github.com/DivanteLtd/vue-storefront/issues/5203))
 - added missing order getter to get item price ([#5231](https://github.com/DivanteLtd/vue-storefront/issues/5231))
 - retry updating the cart with new version if previous request failed due to a version mismatch ([#5264](https://github.com/DivanteLtd/vue-storefront/issues/5264))
+- [BREAKING] loadWishlist, loadUser, loadCart renamed to `load` ([#5285](https://github.com/DivanteLtd/vue-storefront/issues/5285))
 
 ## 0.2.6
 

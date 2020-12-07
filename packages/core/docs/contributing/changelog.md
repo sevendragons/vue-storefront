@@ -7,6 +7,7 @@
 - added new performance options to `@vue-storefront/nuxt` package ([#5195](https://github.com/DivanteLtd/vue-storefront/issues/5195))
 - open active category and highlight current subcategory on the Category page ([#5244](https://github.com/DivanteLtd/vue-storefront/issues/5244))
 - added missing order getter to get item price ([#5231](https://github.com/DivanteLtd/vue-storefront/issues/5231))
+- [BREAKING] loadWishlist, loadUser, loadCart renamed to `load` ([#5285](https://github.com/DivanteLtd/vue-storefront/issues/5285))
 
 ## 2.0.12
 
